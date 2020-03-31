@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+        <link rel="stylesheet" href="../css/style.css" type="text/css" />
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script> -->
+
+        <!-- p5.js -->
+        <script src="../libraries/p5.js"></script>
+        <script src="../libraries/p5.dom.js"></script>
+        
+        <!-- barba.js -->
+        <script type="text/javascript" src="../js/barba.min.js"></script>
+
+        <!-- jQuery -->
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous">
+        </script>
+        
+        <!-- googlefonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <!-- p5.js -->
+        <script src="../js/sketch.js"></script>
+        <!-- canvas移動後を補正するグレーの背景 -->
+        <div id="background"></div>
+
+        <div class="contents">
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">TOP</a></li>
+                <li><a href="work.html">WORK</a></li>
+                <li><a href="about.html#">ABOUT</a></li>
+                <li><a href="about.html#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div id="logo-icon">
+            <img src="../image/logo.png"/>
+        </div>
+        <section id="barba-wrapper" aria-live="polite">
+            <div class="barba-container">
+                <!-- 半透明 -->
+                <div id="overlay"></div>
+
+                <!-- アンカー用 -->
+                <!-- <div id="about-top"></div> -->
+
+                <div class="about-wrapper">
+                    <div class="page-head">
+                        <img src="../image/about.png">
+                    </div>
+                    <div class="about-text">
+                        <h1>Profile</h1>
+                        <p>
+                            藤田　侑己（ふじた　ゆうき）<br>
+                            1998年4月2日生まれ<br>
+                            名古屋市立大学　芸術工学部　情報環境デザイン学科（2021年3月　卒業予定）<br>
+                            <br>
+                            面白いモノを考えたり作ったりすることが好きで、幅広くデジタルコンテンツを制作したいと思っています。ユーザーの体験を重視し、人をわくわくさせるもの、感動させるものを作るような仕事がしたいです。<br>
+                            <br>
+                            知識やスキルはどれも未熟ですが、新しいことに挑戦する意欲や初めて触れるものに対する吸収力、またクオリティや細部へのこだわりは持っています。<br>
+                        </p>
+                    </div>
+                    <div class="about-skills">
+                        <h1>Skills</h1>
+                        <p>
+                            HTML / SCSS / p5.js / Processing / Unity / Python / illustrator / DTM
+                        </p>
+                    </div>
+                    <div class="page-head">
+                        <img src="../image/contact.png">
+                    </div>
+                    <div id="contact">
+                        <p>
+                            クリックするとメールが開きます。
+                        </p>
+                        <img id="arrow-down" src="../image/arrow_down.png">
+                        <br>
+                        <img id="email-button" src="../image/email_button.png">
+                    </div>
+                </div>
+                <div id="scroll-top">
+                    <a href="#">
+                        <img src="../image/scroll_top.png"/>
+                    </a>
+                </div>
+            </div>
+        </section>
+        </div> <!-- content終わり -->
+    <!-- この位置で読み込むのが良さげ -->
+    <script src="../js/script.js"></script>
+    <script type="text/javascript" src="../js/barba-custom.js"></script>
+    </body>
+</html>
