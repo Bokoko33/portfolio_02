@@ -106,9 +106,17 @@ var FadeTransition = Barba.BaseTransition.extend({
   },
 
   fadeIn: function() {
+    // if(location.href.indexOf('work') != -1){
+    //   $('#p5canvas').fadeOut(200);
+    // }
+    // else{
+    //   $('#p5canvas').fadeIn(200);
+    // }
     // ページトップに移動（これがないとスクロールしたところのまま画面遷移する）
     // jQueryで書く場合は $(document).scrollTop(0);
     // $(document).scrollTop(0);
+
+
 
     //------------遷移後のスクロール位置を補正する------------------
     // ヘッダー追従かどうか
@@ -142,8 +150,11 @@ var FadeTransition = Barba.BaseTransition.extend({
     // newContainerはnewContainerLoadingを解決した後に利用できる
     var $el = $(this.newContainer);
 
+
     // 古いコンテナ
     $(this.oldContainer).hide();
+
+    
 
     // 新たに読み込まれるbarba-containerの初期設定
     // visiblityはデフォルトhiddenなのでvisibleに変える
@@ -152,9 +163,10 @@ var FadeTransition = Barba.BaseTransition.extend({
       opacity : 0
     });
 
-    $el.animate({ opacity: 1 }, 200, function() {
+    $el.animate({ opacity: 1 }, 1000, function() {
       // 遷移が終了したら.done()
       // .done()は自動的にDOMから古いコンテナを削除する
+
       _this.done();
     });
   }
@@ -162,6 +174,8 @@ var FadeTransition = Barba.BaseTransition.extend({
 
 // Barbaに作成した遷移処理を指定
 Barba.Pjax.getTransition = function() {
+  // if(!all_clear) return;
+
   return FadeTransition;
 };
 
@@ -210,60 +224,3 @@ Barba.Pjax.preventCheck = function(evt, element) {
         return true;
     }
 };
-
-// function scroll(){
-//     // ヘッダー追従かどうか
-//     var headerFixed = false;
-//     // URLに「#」が存在するか
-//     if(location.hash){
-//         var anchor = document.querySelector( location.hash );
-//         if(anchor){
-//             var rect = anchor.getBoundingClientRect();
-//             var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//             if(headerFixed){
-//                 var header = document.getElementById('header');
-//                 if(header){
-//                     top = top - header.clientHeight;
-//                 }
-//             }
-//             var top = rect.top + scrollTop;
-//             window.scrollTo(0,top);
-//         }else{
-//         // アンカー先が存在しなければページトップに
-//             window.scrollTo(0,0);
-//         }
-//     }else{
-//     // URLに「#」が存在しなければページトップに
-//         window.scrollTo(0,0);
-//     }
-// }
-// Barba.Dispatcher.on('transitionCompleted',scroll);
-
-// ページ読み込み時にdocument.writeが書かれている外部スクリプトは
-// 読み込まれないので、iframe上に一時的にwriteしてコールバックを受け取る
-// function getWritten(fileName, callback) {
-//   var $iframe = $("<iframe hidden\/>");
-//   // iframe が DOM 上に存在しないとうまくいかないので一時的に出力する
-//   $iframe.appendTo("body");
-//   var frameDocument = $iframe[0].contentWindow.document;
-//   var scriptTag = "<script src=\"" + fileName + "\"><\/script>";
-//   frameDocument.open();
-//   // frame 内での window.setResult に結果受信用関数を作成する
-//   $iframe[0].contentWindow.setResult = function(html) {
-//     // 親フレーム上から用済みの iframe を除去する
-//     $iframe.remove();
-//     // 取得した文字列には scriptTag が含まれているので削除してコールバックに渡す
-//     callback(html.replace(scriptTag, ""));
-//   };
-//   frameDocument.write(
-//     "<div id=\"area-to-write\">" +
-//     // div タグ内に scriptTag を貼る
-//     scriptTag +
-//     "<\/div>" +
-//     "<script>" +
-//     // div タグ内に出力された文字列を setResult() に渡す
-//     "setResult(document.querySelector(\"#area-to-write\").innerHTML);" +
-//     "<\/script>"
-//   );
-//   frameDocument.close();
-// }

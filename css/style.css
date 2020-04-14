@@ -13,10 +13,16 @@
 }
 
 #defaultCanvas0 {
-  z-index: -10;
+  z-index: -20;
   top: 0;
   position: fixed;
   transition: 1.2s;
+}
+
+#sub-canvas {
+  z-index: -10;
+  top: 0;
+  position: fixed;
 }
 
 #logo-icon {
@@ -148,7 +154,7 @@ h1 {
   left: 0;
   right: 0;
   margin: auto;
-  padding-top: 200px;
+  padding-top: 180px;
   padding-bottom: 120px;
 }
 
@@ -220,6 +226,67 @@ h1 {
   width: 90%;
 }
 
+.work-end {
+  display: block;
+  width: 100px;
+  right: 0;
+  left: 0;
+  margin: 120px auto;
+  text-align: center;
+}
+
+.work-end .point {
+  display: inline-block;
+  background-color: #2d2d2d;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  margin: 10px;
+}
+
+.otherworks h2 {
+  text-align: center;
+}
+
+.otherworks .nav-to-other {
+  display: block;
+  width: 70vw;
+  right: 0;
+  left: 0;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.otherworks .nav-to-other a {
+  width: 200px;
+  margin: 60px auto;
+  display: inline-block;
+  font-size: 24px;
+  font-family: 'Lato';
+  font-weight: 200;
+}
+
+.otherworks .nav-to-other #previous {
+  text-align: right;
+  margin-right: 16vw;
+}
+
+.otherworks .nav-to-other #next {
+  text-align: left;
+  margin-left: 16vw;
+}
+
+.otherworks .nav-to-other #vertical-line {
+  width: 1px;
+  height: 160px;
+  background-color: #2d2d2d;
+  display: inline-block;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
 #overlay {
   top: 0;
   left: 0;
@@ -258,16 +325,16 @@ h1 {
   font-weight: 200;
 }
 
-.about-wrapper #contact {
+.about-wrapper #contact-top {
   text-align: center;
   padding-bottom: 300px;
 }
 
-.about-wrapper #contact #arrow-down {
+.about-wrapper #contact-top #arrow-down {
   margin: 36px auto;
   width: 12px;
 }
 
-.about-wrapper #contact #email-button {
+.about-wrapper #contact-top #email-button {
   width: 320px;
 }

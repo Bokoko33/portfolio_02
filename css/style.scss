@@ -19,10 +19,15 @@ $side-space-sum:200px;
 }
 
 #defaultCanvas0{
-    z-index: -10;
+    z-index: -20;
     top: 0;
     position: fixed;
     transition: 1.2s;
+}
+#sub-canvas{
+    z-index: -10;
+    top: 0;
+    position: fixed;
 }
 
 #logo-icon{
@@ -148,7 +153,7 @@ h1{
     left: 0;
     right: 0;
     margin: auto;
-    padding-top: 200px;
+    padding-top: 180px;
     padding-bottom: 120px;
     h1{
         font-size: 36px;
@@ -207,7 +212,64 @@ h1{
         margin: 6vw auto;
         width: 90%;
     }
-
+}
+.work-end{
+    display: block;
+    width: 100px;
+    // height: 5px;
+    right: 0;
+    left: 0;
+    margin: 120px auto;
+    text-align: center;
+    .point{
+        display: inline-block;
+        background-color: $soft-black;
+        border-radius: 50%;
+        width: 6px;
+        height: 6px;
+        margin: 10px;
+    }
+}
+.otherworks{
+    h2{
+        text-align: center;
+    }
+    .nav-to-other{
+        display: block;
+        width: 70vw;
+        right: 0;
+        left: 0;
+        margin: 100px auto;
+        text-align: center;
+        a{
+            width: 200px;
+            margin: 60px auto;
+            display: inline-block;
+            font-size: 24px;
+            font-family: 'Lato';
+            font-weight: 200;
+            // text-align: center;
+        }
+        #previous{
+            text-align: right;
+            margin-right: 16vw;
+        }
+        #next{
+            text-align: left;
+            margin-left: 16vw;
+        }
+        #vertical-line{
+            width: 1px;
+            height: 160px;
+            background-color: $soft-black;
+            display: inline-block;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            left: 0;
+            // border-radius: 0px;
+        }
+    }
 }
 
 
@@ -244,7 +306,7 @@ h1{
         font-size: 24px;
         font-weight: 200;
     }
-    #contact{
+    #contact-top{
         text-align: center;
         padding-bottom: 300px;
         #arrow-down{
