@@ -1,5 +1,6 @@
 $soft-black :#2d2d2d;
-$thumb-width:34.5vw;
+$work-width:76vw;
+$thumb-width:($work-width - 1)/2;
 $view-width:100vw;
 $side-space-sum:200px;
 
@@ -110,7 +111,7 @@ h1{
 }
 .work-wrapper{
     // width: calc(100vw - 120*2px);
-    width: 70vw;
+    width: $work-width;
     left: 0;
     right: 0;
     margin: auto;
@@ -139,7 +140,7 @@ h1{
 
 //作品詳細ページ
 #back-button{
-    left: 3.4vw;
+    left: 3.2vw;
     top: 140px;
     width: 82px;
     position: fixed;
@@ -149,7 +150,7 @@ h1{
 }
 .work-details-wrapper{
     // width: calc(100vw - 120*2px);
-    width: 78vw;
+    width: $work-width;
     left: 0;
     right: 0;
     margin: auto;
@@ -169,8 +170,11 @@ h1{
     .work-top-image{
         margin: 2.5vw auto;
         width: 100%;
+        height: $work-width/1.618;
         img{
             width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
     .work-summary{
@@ -189,6 +193,9 @@ h1{
             .work-details-text{
                 margin-top: 3vw;
                 width: 86%;
+                a{
+                    text-decoration: underline;
+                }
             }
         }
     }
@@ -198,10 +205,13 @@ h1{
             flex-wrap: wrap;
             justify-content: space-between;
             li{
-                width: 38.5vw;
+                width: $thumb-width;
+                height: $thumb-width/1.618;
                 margin: 0.3vw 0;
                 img{
+                    height: 100%;
                     width: 100%;
+                    object-fit: cover;
                 }
             }
         }
@@ -231,6 +241,7 @@ h1{
     }
 }
 .otherworks{
+    height: 300px;
     h2{
         text-align: center;
     }
@@ -242,21 +253,23 @@ h1{
         margin: 100px auto;
         text-align: center;
         a{
-            width: 200px;
-            margin: 60px auto;
+            width: 120px;
+            margin: 50px 0;
             display: inline-block;
-            font-size: 24px;
+            font-size: 20px;
             font-family: 'Lato';
             font-weight: 200;
             // text-align: center;
         }
         #previous{
             text-align: right;
-            margin-right: 16vw;
+            margin-left: 6vw;
+            float: left;
         }
         #next{
             text-align: left;
-            margin-left: 16vw;
+            margin-right: 6vw;
+            float: right;
         }
         #vertical-line{
             width: 1px;

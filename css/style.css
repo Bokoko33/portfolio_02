@@ -111,7 +111,7 @@ h1 {
 }
 
 .work-wrapper {
-  width: 70vw;
+  width: 76vw;
   left: 0;
   right: 0;
   margin: auto;
@@ -133,13 +133,13 @@ h1 {
 
 .work-thumb {
   background-color: #2d2d2d;
-  width: 34.5vw;
-  height: 21.32262vw;
+  width: 37.5vw;
+  height: 23.17676vw;
   margin: 0.5vw auto;
 }
 
 #back-button {
-  left: 3.4vw;
+  left: 3.2vw;
   top: 140px;
   width: 82px;
   position: fixed;
@@ -150,7 +150,7 @@ h1 {
 }
 
 .work-details-wrapper {
-  width: 78vw;
+  width: 76vw;
   left: 0;
   right: 0;
   margin: auto;
@@ -174,10 +174,13 @@ h1 {
 .work-details-wrapper .work-top-image {
   margin: 2.5vw auto;
   width: 100%;
+  height: 46.97157vw;
 }
 
 .work-details-wrapper .work-top-image img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .work-details-wrapper .work-summary {
@@ -204,6 +207,10 @@ h1 {
   width: 86%;
 }
 
+.work-details-wrapper .work-summary li .work-details-text a {
+  text-decoration: underline;
+}
+
 .work-details-wrapper .work-sub-image ul {
   display: flex;
   flex-wrap: wrap;
@@ -211,12 +218,15 @@ h1 {
 }
 
 .work-details-wrapper .work-sub-image ul li {
-  width: 38.5vw;
+  width: 37.5vw;
+  height: 23.17676vw;
   margin: 0.3vw 0;
 }
 
 .work-details-wrapper .work-sub-image ul li img {
+  height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 
 .work-details-wrapper .work-PR-text {
@@ -244,6 +254,10 @@ h1 {
   margin: 10px;
 }
 
+.otherworks {
+  height: 300px;
+}
+
 .otherworks h2 {
   text-align: center;
 }
@@ -258,22 +272,24 @@ h1 {
 }
 
 .otherworks .nav-to-other a {
-  width: 200px;
-  margin: 60px auto;
+  width: 120px;
+  margin: 50px 0;
   display: inline-block;
-  font-size: 24px;
+  font-size: 20px;
   font-family: 'Lato';
   font-weight: 200;
 }
 
 .otherworks .nav-to-other #previous {
   text-align: right;
-  margin-right: 16vw;
+  margin-left: 6vw;
+  float: left;
 }
 
 .otherworks .nav-to-other #next {
   text-align: left;
-  margin-left: 16vw;
+  margin-right: 6vw;
+  float: right;
 }
 
 .otherworks .nav-to-other #vertical-line {

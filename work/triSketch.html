@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+        <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script> -->
+
+        <!-- p5.js -->
+        <script src="../../libraries/p5.js"></script>
+        <script src="../../libraries/p5.dom.js"></script>
+        
+        <!-- barba.js -->
+        <script type="text/javascript" src="../js/barba.min.js"></script>
+
+        <!-- jQuery -->
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous">
+        </script>
+        
+        <!-- googlefonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <!-- p5.js -->
+        <div id="p5canvas"></div>
+        <script src="../../js/sketch_main.js"></script>
+        <!-- canvas移動後を補正するグレーの背景 -->
+        <div id="background"></div>
+        <nav class="menu">
+            <ul>
+                <li><a id="top" href="/">TOP</a></li>
+                <li><a id="work" href="/work/">WORK</a></li>
+                <li><a id="about" href="/about/#">ABOUT</a></li>
+                <li><a id="contact" href="/about/#contact-top">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div id="logo-icon">
+            <a id="I" href="/">
+                <img src="/image/logo.png"/>
+            </a>
+        </div>
+        <section id="barba-wrapper" aria-live="polite">
+            <div class="barba-container">
+                <div id="back-button">
+                    <a href="/work/">
+                        <img src="../image/back.png">
+                    </a>
+                </div>
+                <div class="work-details-wrapper">
+                    <h1>TriSketch</h1>
+                    <h2>installation</h2>
+                    <div class="work-top-image">
+                        <img src="../image/triSketch_01.png">
+                    </div>
+                    <div class="work-summary">
+                        <ul>
+                            <li>
+                                <h3>Role</h3>
+                                <p>visual</p>
+                            </li>
+                            <li>
+                                <h3>Term</h3>
+                                <p>2 weeks</p>
+                            </li>
+                            <li>
+                                <h3>Skills</h3>
+                                <p>Processing</p>
+                            </li>
+                            <li>
+                                <h3>Outline</h3>
+                                <div class="work-details-text">
+                                    <p>
+                                        2年次の学園祭で展示した参加型インスタレーションです。私を含め部署内の希望者が各々ビジュアル表現を制作し、インタラクションの部分を部署の先輩にまとめて担当していただく形での制作でした。<br>
+                                        ステッキ状のガジェットを用いて3種類の描画が楽しめる作品となっています。
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <div class="work-sub-image">
+                        <ul>
+                            <li>
+                                <img src="../image/triSketch_01.png">
+                            </li>
+                            <li>
+                                <img src="../image/triSketch_02.png">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="work-PR-text">
+                        <p>
+                            ステッキ状のガジェットがRGBそれぞれの光を発し、スクリーン側に設置されたwebカメラを用いて位置や色を画像処理で認識し、3つそれぞれの描画パターンを制御しています。<br>
+                            私はProcessingを用いたビジュアル部分の制作のみの担当でしたが、自分の作ったものを大きなスクリーン上でいろいろな人に楽しんでもらうという初めての経験となりました。この制作がきっかけでさらに多くの人に自分の作品に触れてもらいたい、さらに多くの人を楽しませたいという気持ちが強まりました。
+                        </p>
+                    </div>
+                    <div class="work-end">
+                        <div class="point"></div>
+                        <div class="point"></div>
+                        <div class="point"></div>
+                    </div>
+                    <div class="otherworks">
+                        <h2>OTHER WORKS</h2>
+                        <div class="nav-to-other">
+                            <a id="previous" href="gemini.html">- PREVIOUS</a>
+                            <div id="vertical-line"></div>
+                            <a id="next" href="idencap.html">NEXT -</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="scroll-top">
+                    <img src="../image/scroll_top.png">
+                </div>
+            </div>
+        </section>
+    <!-- この位置で読み込むのが良さげ -->
+    <script src="../js/script.js"></script>
+    <script type="text/javascript" src="../js/barba-custom.js"></script>
+    </body>
+</html>

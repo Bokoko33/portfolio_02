@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+        <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script> -->
+
+        <!-- p5.js -->
+        <script src="../../libraries/p5.js"></script>
+        <script src="../../libraries/p5.dom.js"></script>
+        
+        <!-- barba.js -->
+        <script type="text/javascript" src="../js/barba.min.js"></script>
+
+        <!-- jQuery -->
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous">
+        </script>
+        
+        <!-- googlefonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <!-- p5.js -->
+        <div id="p5canvas"></div>
+        <script src="../../js/sketch_main.js"></script>
+        <!-- canvas移動後を補正するグレーの背景 -->
+        <div id="background"></div>
+        <nav class="menu">
+            <ul>
+                <li><a id="top" href="/">TOP</a></li>
+                <li><a id="work" href="/work/">WORK</a></li>
+                <li><a id="about" href="/about/#">ABOUT</a></li>
+                <li><a id="contact" href="/about/#contact-top">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div id="logo-icon">
+            <a id="I" href="/">
+                <img src="/image/logo.png"/>
+            </a>
+        </div>
+        <section id="barba-wrapper" aria-live="polite">
+            <div class="barba-container">
+                <div id="back-button">
+                    <a href="/work/">
+                        <img src="../image/back.png">
+                    </a>
+                </div>
+                <div class="work-details-wrapper">
+                    <h1>第五人キャプ</h1>
+                    <h2>game</h2>
+                    <div class="work-top-image">
+                        <img src="../image/Idencap_01.png">
+                    </div>
+                    <div class="work-summary">
+                        <ul>
+                            <li>
+                                <h3>Role</h3>
+                                <p>system / animation</p>
+                            </li>
+                            <li>
+                                <h3>Term</h3>
+                                <p>2 month</p>
+                            </li>
+                            <li>
+                                <h3>Skills</h3>
+                                <p>Unity / Motion Capture</p>
+                            </li>
+                            <li>
+                                <h3>Outline</h3>
+                                <div class="work-details-text">
+                                    <p>
+                                        大学の授業でモーションキャプチャーに触れる機会があり、制作したアニメーションデータを用いて大人気オンラインゲームIdentityV（第五人格）のパロディ作品を作りました。私を含め3人でのチーム制作となっています。
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <div class="work-sub-image">
+                        <ul>
+                            <li>
+                                <img src="../image/Idencap_02.png">
+                            </li>
+                            <li>
+                                <img src="../image/Idencap_03.png">
+                            </li>
+                            <li>
+                                <img src="../image/Idencap_04.png">
+                            </li>
+                            <li>
+                                <img src="../image/Idencap_05.png">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="work-PR-text">
+                        <p>
+                            チームを組んだ2人と相談し、アウトプットの手段としてオリジナルの制作も検討しましたが、自由度の高い実習だったため、息抜きのような気持ちで当時3人がハマっていたゲームのパロディを制作することにしました。<br>
+                            全19種類のモーションを撮影し、それぞれ修正しゲーム内のアニメーションとして利用しました。撮影やモーションデータの編集は3人で行い、ゲームとして応用する段階を分業しました。私は主にキャラクター同士の作用やアニメーション遷移を担当し、いかに本家に近い挙動を再現できるかを模索しました。
+                        </p>
+                    </div>
+                    <div class="work-end">
+                        <div class="point"></div>
+                        <div class="point"></div>
+                        <div class="point"></div>
+                    </div>
+                    <div class="otherworks">
+                        <h2>OTHER WORKS</h2>
+                        <div class="nav-to-other">
+                            <a id="previous" href="brouch.html">- PREVIOUS</a>
+                            <div id="vertical-line"></div>
+                            <a id="next" href="d_station.html">NEXT -</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="scroll-top">
+                    <img src="../image/scroll_top.png">
+                </div>
+            </div>
+        </section>
+    <!-- この位置で読み込むのが良さげ -->
+    <script src="../js/script.js"></script>
+    <script type="text/javascript" src="../js/barba-custom.js"></script>
+    </body>
+</html>
