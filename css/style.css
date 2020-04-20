@@ -75,6 +75,7 @@ h1 {
 }
 
 #scroll-top {
+  display: none;
   right: 3.4vw;
   bottom: 26px;
   width: 58px;
@@ -125,17 +126,53 @@ h1 {
   margin: 30px auto;
 }
 
-.work-wrapper ul li img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.work-thumb {
+.work-wrapper ul li .work-thumb {
   background-color: #2d2d2d;
   width: 37.5vw;
   height: 23.17676vw;
   margin: 0.5vw auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.work-wrapper ul li .work-thumb img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: 0.6s ease;
+}
+
+.work-wrapper ul li .work-thumb .hover-mask {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2vw;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: 0.6s ease;
+  color: white;
+  font-weight: 200;
+}
+
+.work-wrapper ul li .work-thumb .hover-mask h1 {
+  font-size: 38px;
+}
+
+.work-wrapper ul li .work-thumb .hover-mask h2 {
+  font-size: 28px;
+}
+
+.work-wrapper ul li .work-thumb :hover .hover-mask {
+  opacity: 1;
+}
+
+.work-wrapper ul li .work-thumb :hover img {
+  transform: scale3d(1.2, 1.2, 1);
 }
 
 #back-button {
@@ -187,27 +224,31 @@ h1 {
   padding: 3vw 0;
 }
 
-.work-details-wrapper .work-summary li {
+.work-details-wrapper .work-summary ul {
+  margin-bottom: 30px;
+}
+
+.work-details-wrapper .work-summary ul li {
   display: flex;
   margin: 2vw auto;
 }
 
-.work-details-wrapper .work-summary li h3 {
+.work-details-wrapper .work-summary ul li h3 {
   width: 6vw;
 }
 
-.work-details-wrapper .work-summary li p {
+.work-details-wrapper .work-summary ul li p {
   font-family: 'Lato';
   font-weight: 200;
   margin: auto 1.2vw;
 }
 
-.work-details-wrapper .work-summary li .work-details-text {
+.work-details-wrapper .work-summary ul li .work-details-text {
   margin-top: 3vw;
   width: 86%;
 }
 
-.work-details-wrapper .work-summary li .work-details-text a {
+.work-details-wrapper .work-summary ul li .work-details-text a {
   text-decoration: underline;
 }
 
@@ -232,8 +273,17 @@ h1 {
 .work-details-wrapper .work-PR-text {
   left: 0;
   right: 0;
-  margin: 6vw auto;
+  margin: 6vw auto 2vw;
   width: 90%;
+}
+
+.visit-link {
+  text-align: right;
+  margin-right: 5vw;
+  margin-top: 20px;
+  font-weight: 200;
+  font-size: 26px;
+  font-family: 'Lato';
 }
 
 .work-end {

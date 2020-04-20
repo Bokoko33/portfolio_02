@@ -4,8 +4,10 @@
 var links = document.querySelectorAll('a[href]');
 var cbk = function(e) {
   if(e.currentTarget.href === window.location.href) {
-    e.preventDefault();
-    e.stopPropagation();
+    if(window.location.href.indexOf('#') == -1){ //基本ページ内リンクはリロードしないが、ページトップ遷移ができなくなるのでそれを除外
+      e.preventDefault();
+      e.stopPropagation();
+    }
   }
 };
 for(var i = 0; i < links.length; i++) {
