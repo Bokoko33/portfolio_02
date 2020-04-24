@@ -222,14 +222,17 @@ function draw(){
     });
 
     //背景に関する処理
-    if(in_works){
-        background(250,250,250,18);
+    if(in_works || windowWidth<480){ //スマホでは残像なし
+        background(250,18);
+
     }
     else{
+        
         var a = dist(centerX,height/2,mouseX,mouseY);
         if(a>150) a = 18;
         else a = 0;
         background(250,a);
+    
     }
 
     //漂流物
@@ -269,40 +272,43 @@ function draw(){
     }
     
     // 反転回数分描画
-    push();
-    translate(centerX,height/2);
-    for(var i=0;i<invertNum;i++){
+    if(windowWidth>480){
+        push();
+        translate(centerX,height/2);
+        for(var i=0;i<invertNum;i++){
 
-        beginShape();
-
-        curveVertex(dp[dp.length-1].pos.x,dp[dp.length-1].pos.y);
-        for(var k=0;k<dp.length;k++){
-            curveVertex(dp[k].pos.x, dp[k].pos.y);
-        }
-        curveVertex(dp[0].pos.x, dp[0].pos.y);
-        curveVertex(dp[1].pos.x, dp[1].pos.y);
-
-        endShape();
-
-
-        //残像分の処理
-        for(var a=0;a<posNum*interval;a+=interval){
             beginShape();
 
-            curveVertex(dp[dp.length-1].afterPosX[a],dp[dp.length-1].afterPosY[a]);
-            for(var b=0;b<dp.length;b++){
-                curveVertex(dp[b].afterPosX[a], dp[b].afterPosY[a]);
+            curveVertex(dp[dp.length-1].pos.x,dp[dp.length-1].pos.y);
+            for(var k=0;k<dp.length;k++){
+                curveVertex(dp[k].pos.x, dp[k].pos.y);
             }
-            curveVertex(dp[0].afterPosX[a], dp[0].afterPosY[a]);
-            curveVertex(dp[1].afterPosX[a], dp[1].afterPosY[a]);
+            curveVertex(dp[0].pos.x, dp[0].pos.y);
+            curveVertex(dp[1].pos.x, dp[1].pos.y);
 
             endShape();
+
+
+            //残像分の処理
+            for(var a=0;a<posNum*interval;a+=interval){
+                beginShape();
+
+                curveVertex(dp[dp.length-1].afterPosX[a],dp[dp.length-1].afterPosY[a]);
+                for(var b=0;b<dp.length;b++){
+                    curveVertex(dp[b].afterPosX[a], dp[b].afterPosY[a]);
+                }
+                curveVertex(dp[0].afterPosX[a], dp[0].afterPosY[a]);
+                curveVertex(dp[1].afterPosX[a], dp[1].afterPosY[a]);
+
+                endShape();
+            }
+
+            rotate(2*PI / invertNum);
         }
 
-        rotate(2*PI / invertNum);
+        pop();
     }
-
-    pop();
+    
 
     count ++ ;
 
@@ -330,15 +336,12 @@ function draw(){
         endDraw = true;
         $('.contents').fadeIn(2000);
         floatInit();
-        // var url = location.href;
-        // if(url.indexOf('about') == -1){ //aboutでのリロードでなければfpInit(workではもともと非表示)
-        //     floatInit("top");
-        // }
-        // else{
-        //     floatInit("about");
-        // }
     }
-
+    if(windowWidth<480 && !endDraw){ //スマホならアニメーション飛ばす
+        endDraw = true;
+        $('.contents').fadeIn(2000);
+        floatInit();
+    }
 }
 
 // function mouseClicked(){
