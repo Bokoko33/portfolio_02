@@ -1,7 +1,7 @@
 $soft-black :#2d2d2d;
 $work-width-pc:76vw;
 $work-width-sp:84vw;
-$thumb-width-pc:(thumb-width-pc - 1)/2;
+$thumb-width-pc:($work-width-pc - 1)/2;
 
 $view-width:100vw;
 $side-space-sum:200px;
@@ -174,6 +174,22 @@ h1{
                 font-family: 'Lato';
                 font-weight: 300;
                 margin: 15px 0;
+                display: flex;
+                align-items: center;
+                &:after{
+                    content: ""; //これ書かないと表示されない
+                    width: 0px;
+                    height: 1px;
+                    background: $soft-black;
+                    display: block;
+                    margin: auto 5px;
+                    transition: all 0.2s;
+                }
+                &:hover{
+                    &:after{
+                        width: 7px;
+                    }
+                }
             }
         }
     }
@@ -204,13 +220,18 @@ h1{
 }
 #scroll-top{
     display: none;
+    // visibility: hidden;
     right: 3.4vw;
     bottom: 26px;
     width: 58px;
     position: fixed;
+    // transition: 0.3s ease;
     img{
         width: 100%;
     }
+    // :hover{
+    //     transform: translateY(-5px);
+    // }
 }
 
 //トップページ
@@ -396,7 +417,7 @@ h1{
             width: 100%;
             height: $work-width-sp/1.618;
         }
-        img{
+        img,iframe{
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -502,7 +523,32 @@ h1{
     @include pc{
         margin-right:5vw ;
         margin-top: 20px;
-        font-size: 26px;
+        a{
+            
+            font-size: 26px;
+            display: flex;
+            transition: all 0.3s;
+            flex-direction: row-reverse;
+            &:before{ //row-reverseしてるので逆
+                content: ""; //これ書かないと表示されない
+                width: 10px;
+                height: 1px;
+                background: $soft-black;
+                display: block;
+                margin: auto 20px;
+                transition: all 0.3s;
+                transform-origin: left;
+            }
+
+            &:hover{
+                transform: translateX(5px);
+                &:before{
+                    transform: scaleX(3);
+                }
+            }
+        }
+        
+
     }
     @include sp{
         margin-right:5vw ;
@@ -548,7 +594,7 @@ h1{
             margin: 100px auto;
             text-align: center;
             a{
-                width: 120px;
+                width: 200px;
                 margin: 50px 0;
                 display: inline-block;
                 font-size: 20px;
@@ -557,15 +603,54 @@ h1{
                 // text-align: center;
             }
             #previous{
-                text-align: right;
                 margin-left: 6vw;
                 float: left;
+                display: flex;
+                flex-direction: row-reverse;
+                transition: all 0.3s;
+                &:after{ //flex-dir:reverseしているのでafterで手前に
+                    content: ""; //これ書かないと表示されない
+                    width: 30px;
+                    height: 1px;
+                    background: $soft-black;
+                    display: block;
+                    margin: auto 20px;
+                    transition: all 0.3s;
+                    transform-origin: right;
+                    
+                }
+                &:hover{
+                    transform: translateX(-5px);
+                    &:after{
+                        transform: scaleX(3);
+                    }
+                }
             }
             #next{
-                text-align: left;
                 margin-right: 6vw;
                 float: right;
+                display: flex;
+                justify-content: left;
+                transition: all 0.3s;
+                &:after{
+                    content: ""; //これ書かないと表示されない
+                    width: 30px;
+                    height: 1px;
+                    background: $soft-black;
+                    display: block;
+                    margin: auto 20px;
+                    transition: all 0.3s;
+                    transform-origin: left;
+                }
+
+                &:hover{
+                    transform: translateX(5px);
+                    &:after{
+                        transform: scaleX(3);
+                    }
+                }
             }
+            
             #vertical-line{
                 width: 1px;
                 height: 160px;

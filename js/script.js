@@ -5,10 +5,12 @@ $(function(){
       // 200px スクロールしたらボタン表示
       $(window).scroll(function () {
          if ($(this).scrollTop() > 200) {
-            console.log(pagetop);
-               pagetop.fadeIn();
+            
+               pagetop.fadeIn(300);
+               // pagetop.css('visibility','visible');
          } else {
-               pagetop.fadeOut();
+               pagetop.fadeOut(300);
+               // pagetop.css('visibility','hidden');
          }
       });
       pagetop.click(function () {

@@ -169,6 +169,20 @@ h1 {
     font-family: 'Lato';
     font-weight: 300;
     margin: 15px 0;
+    display: flex;
+    align-items: center;
+  }
+  .menu ul li:after {
+    content: "";
+    width: 0px;
+    height: 1px;
+    background: #2d2d2d;
+    display: block;
+    margin: auto 5px;
+    transition: all 0.2s;
+  }
+  .menu ul li:hover:after {
+    width: 7px;
   }
 }
 
@@ -295,8 +309,8 @@ h1 {
 
 @media (min-width: 1024px) {
   .work-wrapper ul li .work-thumb {
-    width: thumb-width-pc-1/2;
-    height: thumb-width-pc-1/2/1.618;
+    width: 37.5vw;
+    height: 23.17676vw;
     margin: 0.5vw auto;
   }
 }
@@ -429,7 +443,7 @@ h1 {
   }
 }
 
-.work-details-wrapper .work-top-image img {
+.work-details-wrapper .work-top-image img, .work-details-wrapper .work-top-image iframe {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -508,8 +522,8 @@ h1 {
 
 @media (min-width: 1024px) {
   .work-details-wrapper .work-sub-image ul li {
-    width: thumb-width-pc-1/2;
-    height: thumb-width-pc-1/2/1.618;
+    width: 37.5vw;
+    height: 23.17676vw;
     margin: 0.3vw 0;
   }
 }
@@ -545,7 +559,28 @@ h1 {
   .visit-link {
     margin-right: 5vw;
     margin-top: 20px;
+  }
+  .visit-link a {
     font-size: 26px;
+    display: flex;
+    transition: all 0.3s;
+    flex-direction: row-reverse;
+  }
+  .visit-link a:before {
+    content: "";
+    width: 10px;
+    height: 1px;
+    background: #2d2d2d;
+    display: block;
+    margin: auto 20px;
+    transition: all 0.3s;
+    transform-origin: left;
+  }
+  .visit-link a:hover {
+    transform: translateX(5px);
+  }
+  .visit-link a:hover:before {
+    transform: scaleX(3);
   }
 }
 
@@ -602,7 +637,7 @@ h1 {
     text-align: center;
   }
   .otherworks .nav-to-other a {
-    width: 120px;
+    width: 200px;
     margin: 50px 0;
     display: inline-block;
     font-size: 20px;
@@ -610,14 +645,50 @@ h1 {
     font-weight: 200;
   }
   .otherworks .nav-to-other #previous {
-    text-align: right;
     margin-left: 6vw;
     float: left;
+    display: flex;
+    flex-direction: row-reverse;
+    transition: all 0.3s;
+  }
+  .otherworks .nav-to-other #previous:after {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: #2d2d2d;
+    display: block;
+    margin: auto 20px;
+    transition: all 0.3s;
+    transform-origin: right;
+  }
+  .otherworks .nav-to-other #previous:hover {
+    transform: translateX(-5px);
+  }
+  .otherworks .nav-to-other #previous:hover:after {
+    transform: scaleX(3);
   }
   .otherworks .nav-to-other #next {
-    text-align: left;
     margin-right: 6vw;
     float: right;
+    display: flex;
+    justify-content: left;
+    transition: all 0.3s;
+  }
+  .otherworks .nav-to-other #next:after {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: #2d2d2d;
+    display: block;
+    margin: auto 20px;
+    transition: all 0.3s;
+    transform-origin: left;
+  }
+  .otherworks .nav-to-other #next:hover {
+    transform: translateX(5px);
+  }
+  .otherworks .nav-to-other #next:hover:after {
+    transform: scaleX(3);
   }
   .otherworks .nav-to-other #vertical-line {
     width: 1px;
