@@ -764,18 +764,65 @@ h1{
         
     }
     #contact-top{
-        text-align: center;
-        padding-bottom: 300px;
-        #arrow-down{
-            margin: 36px auto;
-            width: 12px;
-        }
-        #email-button{
-            @include pc{
-                width: 320px;
+        padding-bottom: 100px;
+        // #arrow-down{
+        //     margin: 36px auto;
+        //     width: 12px;
+        // }
+        // #email-button{
+        //     @include pc{
+        //         width: 320px;
+        //     }
+        //     @include sp(){
+        //         width: 260px;
+        //     }
+        // }
+        form{
+            width: 80%;
+            margin: 40px auto;
+            right: 0;
+            left: 0;
+            display: block;
+            font-family: 'Lato';
+            li{
+                margin: 60px auto;
+                width: 100%;
+                padding: 10px 15px;
+                p{
+                    margin: 10px auto;
+                    font-size: 22px;
+                }
+                
+                input{
+                    font-size: 18px;
+                    width: 100%;
+                    outline: none;
+                    border-bottom: 1.3px solid $soft-black;
+                }
+                textarea{
+                    font-size: 18px;
+                    width: 100%;
+                    height: 120px;
+                    outline: none;
+                    border: 1.3px solid $soft-black;
+
+                }
             }
-            @include sp(){
-                width: 260px;
+            button{
+                font-size: 22px;
+                width: 140px;
+                height: 50px;
+                left: 0;
+                right:0;
+                margin: 100px auto;
+                display: block;
+                color: $soft-black;
+                border: 1.3px solid $soft-black;
+                transition: all 0.3s;
+                &:hover{
+                    background-color: $soft-black;
+                    color: rgb(250,250,250);
+                }
             }
         }
     }
