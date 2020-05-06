@@ -1,6 +1,6 @@
 $(function(){
    //スクロールトップボタン
-   if(screen.width>480){
+   if(screen.width>700){
       var pagetop = $('#scroll-top');
       // 200px スクロールしたらボタン表示
       $(window).scroll(function () {
